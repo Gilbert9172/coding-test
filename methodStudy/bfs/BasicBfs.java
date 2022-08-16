@@ -15,7 +15,7 @@ import java.util.Queue;
  public class BasicBfs {
 
     public static void main(String[] args) {
-        int[][] graph = {{}, {2,3,8}, {1,6,8}, {1,5}, {5,7}, {3,4,7}, {2}, {4,5}, {1,2}};
+        int[][] graph = {{}, {2,3,8}, {1,7}, {1,4,5}, {3,5}, {3,4}, {7}, {2,6,8}, {1,7}};
 
         // 방문 처리를 위한 boolean배열 선언
         boolean[] visited = new boolean[9];
@@ -30,7 +30,7 @@ import java.util.Queue;
         // BFS에 사용할 큐 생성
         Queue<Integer> q = new LinkedList<>();
 
-        // 큐에 BFS를 시작할 노드 번호를 넣어준다.
+        // 1. 탐색 시작 노드를 큐에 삽입하고 방문 처리를 한다.
         q.offer(start);
 
         // 시작노드 방문처리
@@ -39,7 +39,7 @@ import java.util.Queue;
         // 큐가 빌 때까지 반복
         while (!q.isEmpty()) {
             int nodeIndex = q.poll();
-            sb.append("-> " + nodeIndex);
+            sb.append(" -> " + nodeIndex);
 
             // 큐에서 꺼낸 노드와 연결된 노드들 체크
             for (int i = 0; i < graph[nodeIndex].length; i++) {
