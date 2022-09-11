@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
  * 미로 탐색 (실버1)
  * https://www.acmicpc.net/problem/2178
  */
-public class 미로탐색 {
+public class quiz2178 {
 
     static int n;
     static int m;
