@@ -2,7 +2,7 @@ package Eratosthenes;
 
 public class Sieve {
     public static void main(String[] args) {
-        int N = 25;
+        int N = 26;
         primeNumbers(N);
     }
 
@@ -14,11 +14,13 @@ public class Sieve {
             arr[i] = i;
         }
 
-        for (int i = 2; i <= num; i++) {
+        double sqrt = Math.sqrt(num);
+        for (int i = 2; i <= sqrt ; i++) {
             if (arr[i] == 0) {
                 continue;
             }
 
+            // i의 배수를 구한다.
             for (int j = i * i; j <= num; j += i) {
                 arr[j] = 0;
             }

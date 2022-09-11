@@ -9,24 +9,24 @@ import java.util.stream.Collectors;
  */
 public class quiz42839 {
 
-    static HashSet<String> setList = new HashSet<>();
+    static HashSet<Integer> setList = new HashSet<>();
     static int answer = 0;
 
     public static void main(String[] args) {
 
-        String numbers = "17";
+        String numbers = "011";
 
         // String → int[]
         int[] nums = Arrays.stream(numbers.split("")).mapToInt(Integer::parseInt).toArray();
 
         // 순열
-        for (int i = 1; i <= nums.length; i++) {
-            permutation(nums, new int[nums.length], new boolean[nums.length], 0, 2);
+        for (int i = 0; i < nums.length; i++) {
+            permutation(nums, new int[nums.length], new boolean[nums.length], 0, i + 1);
         }
 
         // 소수 찾기
-        for (String element : setList) {
-            if (isPrimeNum(Integer.parseInt(element))) {
+        for (Integer element : setList) {
+            if (isPrimeNum(element)) {
                 answer ++;
             }
         }
@@ -44,10 +44,7 @@ public class quiz42839 {
             int[] result = Arrays.copyOfRange(output, 0, depth);
 
             String combinedNum = Arrays.stream(result).mapToObj(String::valueOf).collect(Collectors.joining());
-
-            if (!combinedNum.startsWith("0")) {
-                setList.add(combinedNum);
-            }
+            setList.add(Integer.valueOf(combinedNum));
         }
 
         for (int i = 0; i < nums.length; i++) {
