@@ -36,13 +36,13 @@ public class 바이러스DFS {
     public static void dfs(int node, boolean[] visited) {
 
         visited[node] = true;
-        List<Integer> neighborNodes = graph.get(node);
 
+        List<Integer> neighborNodes = graph.get(node);
         for (Integer neighborNode : neighborNodes) {
             if (!visited[neighborNode]) {
+                answer ++;
                 dfs(neighborNode, visited);
             }
         }
-        if (node != 1) answer ++;
     }
 }
