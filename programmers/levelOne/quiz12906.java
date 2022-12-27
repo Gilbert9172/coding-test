@@ -1,6 +1,6 @@
 package levelOne;
 
-import java.util.Stack;
+import java.util.*;
 
 /**
  * 스택/큐
@@ -8,25 +8,20 @@ import java.util.Stack;
  */
 public class quiz12906 {
 
-    static Stack<Integer> stack = new Stack<>();
+    public static void main(String[] args) {
+        int[] arr = {1, 1, 3, 3, 0, 1, 1};
+        System.out.println(Arrays.toString(Solution.solution(arr)));
+    }
 
-        public static void main(String[] args) {
-        int[] arr = {1,1,2,3,3,4,0,0,10};
+    static class Solution {
 
-        for (int n : arr) {
-            if (stack.isEmpty()) {
-                stack.push(n);
-            } else if (stack.get(stack.size()-1) != n) {
-                stack.push(n);
+        static Stack<Integer> stack = new Stack<>();
+        public static int[] solution(int []arr) {
+            for (int n : arr) {
+                if (stack.isEmpty()) stack.push(n);
+                else if (stack.peek() != n) stack.push(n);
             }
-        }
-        int[] answer = new int[stack.size()];
-        for (int i = 0; i < stack.size(); i++) {
-            answer[i] = stack.get(i);
-        }
-
-        for (int i : answer) {
-            System.out.println("i = " + i);
+            return stack.stream().mapToInt(i -> i).toArray();
         }
     }
 }
