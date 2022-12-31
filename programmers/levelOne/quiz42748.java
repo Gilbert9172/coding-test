@@ -1,40 +1,38 @@
 package levelOne;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import static java.util.Arrays.*;
 
 /**
  * k번째 수
  */
 public class quiz42748 {
 
-    static int count = 0;
-
     public static void main(String[] args) {
         int[] array = {1, 5, 2, 6, 3, 7, 4};
         int[][] commands = {{2, 5, 3}, {4, 4, 1}, {1, 7, 3}};
-        int[] answer = new int[commands.length];
+        System.out.println(Arrays.toString(Solution.solution(array, commands)));
+    }
 
+    static class Solution {
+        static int[] solution(int[] array, int[][] commands) {
 
-        for (int[] command : commands) {
+            List<Integer> targetLst = new ArrayList<>();
 
-            int start = command[0] - 1; // 1
-            int end = command[1] -1;   // 4
-            int target = command[2] - 1;
+            for (int[] command : commands) {
 
-            List<Integer> newArr = new ArrayList<>();
+                int start = command[0] - 1;
+                int end = command[1];
+                int targetIdx = command[2];
 
-            for (int i = start; i <= end; i++) {
-                newArr.add(array[i]);
+                int[] ints = copyOfRange(array, start, end);
+                sort(ints);
+                targetLst.add(ints[targetIdx - 1]);
             }
 
-            Collections.sort(newArr);
-
-            answer[count] = newArr.get(target);
-            count ++;
-        }
-
-        for (int i : answer) {
-            System.out.println("i = " + i);
+            return targetLst.stream().mapToInt(Integer::intValue).toArray();
         }
     }
 }
