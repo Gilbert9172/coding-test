@@ -7,8 +7,9 @@
       <sourceFolder url="file://$MODULE_DIR$/methodStudy" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/programmers" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/toss" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/study" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
+    <orderEntry type="jdk" jdkName="graalvm-jdk-21" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
