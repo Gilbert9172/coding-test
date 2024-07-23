@@ -1,4 +1,4 @@
-package 선형자료구조.배열;
+package datastructure.linear.array;
 
 import java.util.ArrayDeque;
 
