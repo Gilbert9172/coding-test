@@ -55,5 +55,5 @@ public class KClosestPointsToOrigin {
                 return -1;
             }
         }
-    }
+    };
 }
