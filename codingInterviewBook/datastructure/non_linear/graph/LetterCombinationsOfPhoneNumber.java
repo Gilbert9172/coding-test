@@ -7,9 +7,6 @@ import java.util.Map;
 
 public class LetterCombinationsOfPhoneNumber {
 
-    public LetterCombinationsOfPhoneNumber() {
-    }
-
     public void dfs(List<String> result, Map<Character, List<Character>> dic, String digits, int index, StringBuilder path) {
         if (path.length() == digits.length()) {
             result.add(String.valueOf(path));
