@@ -1,10 +1,10 @@
-package datastructure.non_linear.graph;
+package datastructure.non_linear.graph.permutations;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Permutations {
+public class V1 {
 
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> results = new ArrayList<>();
