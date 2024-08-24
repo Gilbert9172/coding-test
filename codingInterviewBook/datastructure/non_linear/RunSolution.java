@@ -1,11 +1,16 @@
 package datastructure.non_linear;
 
-import datastructure.non_linear.graph.permutations.V1;
+import datastructure.non_linear.graph.CombinationSum;
+
+import java.util.List;
 
 public class RunSolution {
     public static void main(String[] args) {
-        V1 permutations = new V1();
-        int[] nums = {1, 2, 3};
-        permutations.permute(nums);
+        CombinationSum combinationSum = new CombinationSum();
+        int[] combinations = {2, 3, 5};
+        List<List<Integer>> answer = combinationSum.combinationSum(combinations, 8);
+        for (List<Integer> integerList : answer) {
+            System.out.println(integerList.size());
+        }
     }
 }
