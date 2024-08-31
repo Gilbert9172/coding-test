@@ -1,11 +1,11 @@
-package datastructure.non_linear.graph;
+package datastructure.non_linear.graph.courseSchedule;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CourseSchedule {
+public class V1 {
 
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         Map<Integer, List<Integer>> finishToTakeMap = new HashMap<>();
