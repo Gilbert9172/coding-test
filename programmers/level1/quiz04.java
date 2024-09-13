@@ -1,4 +1,4 @@
-package levelOne;
+package level1;
 
 import java.util.*;
 import java.util.stream.Collectors;

@@ -1,4 +1,4 @@
-package levelTwo.quiz135807;
+package level2.quiz135807;
 
 /**
  * <a href="https://school.programmers.co.kr/learn/courses/30/lessons/135807">숫자 카드 나누기</a>

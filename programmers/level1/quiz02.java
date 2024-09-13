@@ -1,4 +1,4 @@
-package levelOne;
+package level1;
 
 /**
  * 2021 KAKAO BLIND RECRUITMENT

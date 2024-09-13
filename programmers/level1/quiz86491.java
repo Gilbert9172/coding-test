@@ -1,4 +1,4 @@
-package levelOne;
+package level1;
 
 /**
  * 완전탐색

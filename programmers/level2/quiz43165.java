@@ -1,4 +1,4 @@
-package levelTwo;
+package level2;
 
 /**
  * 타겟 넘버 (DFS/BFS) - DFS 사용

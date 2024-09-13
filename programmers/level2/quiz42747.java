@@ -1,7 +1,6 @@
-package levelTwo;
+package level2;
 
 import java.util.*;
-import java.util.stream.Stream;
 
 public class quiz42747 {
 

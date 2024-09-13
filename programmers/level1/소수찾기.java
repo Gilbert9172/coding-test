@@ -1,4 +1,4 @@
-package levelOne;
+package level1;
 
 public class 소수찾기 {
 
