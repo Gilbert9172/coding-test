@@ -1,4 +1,4 @@
-package datastructure.non_linear.graph;
+package datastructure.non_linear.graph.networkDelayTime;
 
 import java.util.*;
 
