@@ -16,9 +16,9 @@ public class Insertion {
 
             while (beforeIdx >= 0 && arr[beforeIdx] > temp) {
                 arr[beforeIdx + 1] = arr[beforeIdx];
+                arr[beforeIdx] = temp;
                 beforeIdx --;
             }
-            arr[beforeIdx + 1] = temp;
 
             System.out.println(Arrays.toString(arr));
         }
