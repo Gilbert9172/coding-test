@@ -1,7 +1,5 @@
 package datastructure.linear.stakcQueue.leetCode973;
 
-import org.jetbrains.annotations.NotNull;
-
 public class Point implements Comparable<Point> {
 
     private long distance;
@@ -30,7 +28,7 @@ public class Point implements Comparable<Point> {
     }
 
     @Override
-    public int compareTo(@NotNull Point other) {
+    public int compareTo(Point other) {
         return Long.compare(this.getDistance(), other.getDistance());
     }
 }
