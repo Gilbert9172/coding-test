@@ -1,4 +1,4 @@
-package backTracking;
+package backTracking.easy;
 
 import java.util.ArrayList;
 import java.util.List;
