@@ -9,32 +9,34 @@ public class V1 {
     List<String> answer = new ArrayList<>();
 
     public List<String> restoreIpAddresses(String s) {
-        backTracking("", 0, 0, s);
+        backTracking(s, 0, 0, new StringBuilder());
         return answer;
     }
 
     private void backTracking(
-            String path,
-            int idx,
+            String s,
             int dotCount,
-            String s
+            int cursor,
+            StringBuilder ip
     ) {
-        // Invalid Condition
-        if (dotCount > 4) return;
-
-        // Valid Condition
-        if (dotCount == 4 && idx >= s.length()) {
-            answer.add(path.substring(0, path.length() - 1));
+        if (dotCount > 4) {
+            return;
+        }
+        if (dotCount == 4 && cursor >= s.length()) {
+            answer.add(ip.substring(0, ip.length() - 1));
             return;
         }
 
-        // 길이는 1~3 && idx가 문자열 내 위치
-        for (int length = 1; length <= 3 && idx + length <= s.length(); length++) {
-            String num = s.substring(idx, idx + length);
-            if (num.charAt(0) == '0' && length != 1) break;
-            else if (Integer.parseInt(num) <= 255) {
-                // idx + length : 1, 11, 111 이런 식으로 문자열을 추가하기 위함
-                backTracking(path + num + ".", idx + length, dotCount + 1, s);
+        for (int length = 1; length <= 3 && cursor + length <= s.length(); length++) {
+            String segment = s.substring(cursor, cursor + length);
+            if (segment.charAt(0) == '0' && segment.length() != 1) {
+                break;
+            }
+            if (Integer.parseInt(segment) <= 255) {
+                int prevLength = ip.length();
+                ip.append(segment).append(".");
+                backTracking(s, dotCount + 1, cursor + length, ip);
+                ip.setLength(prevLength);
             }
         }
     }

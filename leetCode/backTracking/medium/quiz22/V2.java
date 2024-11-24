@@ -3,6 +3,10 @@ package backTracking.medium.quiz22;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 여는 문자는 n 보다 작을 때 추가할 수 있다.
+ * 닫는 문자는, 현재 열려있는 문자보다 닫혀 있는 문자의 수가 작을 때 추가할 수 있다.
+ */
 public class V2 {
 
     List<String> answer = new ArrayList<>();

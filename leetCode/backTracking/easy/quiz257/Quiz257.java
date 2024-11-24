@@ -1,4 +1,4 @@
-package backTracking.easy;
+package backTracking.easy.quiz257;
 
 import java.util.ArrayList;
 import java.util.List;

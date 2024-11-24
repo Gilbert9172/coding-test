@@ -49,4 +49,10 @@ public class V1 {
                 '9', "wxyz"
         );
     }
+
+    public static void main(String[] args) {
+        V1 v1 = new V1();
+        List<String> answer = v1.letterCombinations("23");
+        answer.forEach(System.out::println);
+    }
 }
