@@ -36,14 +36,14 @@ public class V1 {
         for (int idx = cursor; idx < input.length(); idx++) {
             String segment = input.substring(cursor, idx + 1);
             bucket.add(segment);
-            backTracking(input, cursor + segment.length(), bucket);
+            backTracking(input, idx + 1, bucket);
             bucket.removeLast();
         }
     }
 
     public static void main(String[] args) {
         V1 v1 = new V1();
-        int answer = v1.maxUniqueSplit("ababccc");
+        int answer = v1.maxUniqueSplit("abaac");
         System.out.println(answer);
     }
 }

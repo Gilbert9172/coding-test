@@ -30,7 +30,7 @@ public class V2 {
             String segment = input.substring(cursor, idx + 1);
             if (!bucket.contains(segment)) {
                 bucket.add(segment);
-                backTracking(input, cursor + segment.length(), bucket);
+                backTracking(input, idx + 1, bucket);
                 bucket.remove(segment);
             }
         }
