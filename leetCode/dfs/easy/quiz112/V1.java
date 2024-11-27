@@ -1,5 +1,7 @@
 package dfs.easy.quiz112;
 
+import dfs.model.TreeNode;
+
 public class V1 {
 
     public boolean hasPathSum(TreeNode root, int targetSum) {

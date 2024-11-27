@@ -1,5 +1,7 @@
 package dfs.easy.quiz104;
 
+import dfs.model.TreeNode;
+
 public class V1 {
 
     public int maxDepth(TreeNode root) {
