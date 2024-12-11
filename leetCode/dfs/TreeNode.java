@@ -1,4 +1,4 @@
-package dfs.model;
+package dfs;
 
 public class TreeNode {
     public int val;

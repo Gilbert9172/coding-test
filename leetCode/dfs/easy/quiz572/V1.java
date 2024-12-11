@@ -1,6 +1,6 @@
 package dfs.easy.quiz572;
 
-import dfs.model.TreeNode;
+import dfs.TreeNode;
 
 public class V1 {
 

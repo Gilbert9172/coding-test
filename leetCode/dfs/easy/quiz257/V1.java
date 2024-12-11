@@ -1,6 +1,6 @@
 package dfs.easy.quiz257;
 
-import dfs.model.TreeNode;
+import dfs.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

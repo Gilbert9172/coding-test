@@ -1,6 +1,6 @@
 package dfs.easy.quiz543;
 
-import dfs.model.TreeNode;
+import dfs.TreeNode;
 
 /**
  * 풀이 전략
