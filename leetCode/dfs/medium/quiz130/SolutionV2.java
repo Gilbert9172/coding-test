@@ -2,42 +2,60 @@ package dfs.medium.quiz130;
 
 public class SolutionV2 {
 
+    private static final char WALL = 'X';
+    private static final char LAND = 'O';
+
     public void solve(char[][] board) {
-        int m = board.length, n = board[0].length;
-        boolean[][] vis = new boolean[m][n];
-        for (int i = 0; i < m; i++) {
-            if (board[i][0] == 'O' && !vis[i][0])
+        int maxRow = board.length, maxCol = board[0].length;
+        boolean[][] vis = new boolean[maxRow][maxCol];
+        for (int i = 0; i < maxRow; i++) {
+            if (board[i][0] == 'O' && !vis[i][0]) {
                 dfs(board, vis, i, 0);
-            if (board[i][n - 1] == 'O' && !vis[i][n - 1])
-                dfs(board, vis, i, n - 1);
+            }
+            if (board[i][maxCol - 1] == LAND && !vis[i][maxCol - 1]) {
+                dfs(board, vis, i, maxCol - 1);
+            }
         }
-        for (int i = 0; i < n; i++) {
-            if (board[0][i] == 'O' && !vis[0][i])
+        for (int i = 0; i < maxCol; i++) {
+            if (board[0][i] == LAND && !vis[0][i]) {
                 dfs(board, vis, 0, i);
-            if (board[m - 1][i] == 'O' && !vis[m - 1][i])
-                dfs(board, vis, m - 1, i);
+            }
+            if (board[maxRow - 1][i] == LAND && !vis[maxRow - 1][i]) {
+                dfs(board, vis, maxRow - 1, i);
+            }
         }
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                if (!vis[i][j])
-                    board[i][j] = 'X';
+        for (int row = 0; row < maxRow; row++) {
+            for (int col = 0; col < maxCol; col++) {
+                if (!vis[row][col])
+                    board[row][col] = WALL;
             }
         }
     }
 
-    public void dfs(char[][] board, boolean[][] vis, int r, int c) {
-        vis[r][c] = true;
-        int[] rd = {-1, 0, 1, 0};
-        int[] cd = {0, 1, 0, -1};
-        for (int i = 0; i < 4; i++) {
-            int row = rd[i] + r;
-            int col = cd[i] + c;
-            if (row >= 0 && col >= 0 &&
-                    row < board.length && col < board[0].length &&
-                    board[row][col] == 'O' && !vis[row][col]) {
-                dfs(board, vis, row, col);
+    public void dfs(char[][] board, boolean[][] vis, int row, int col) {
+        vis[row][col] = true;
+        int[][] dirs = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+        for (int[] dir : dirs) {
+            int nextRow = row + dir[0];
+            int nextCol = col + dir[1];
+            if (positionInRage(board, nextRow, nextCol) &&
+                    isLand(board, vis, nextRow, nextCol) &&
+                    visited(vis, nextRow, nextCol)) {
+                dfs(board, vis, nextRow, nextCol);
             }
         }
+    }
+
+    private boolean positionInRage(char[][] board, int row, int col) {
+        return row >= 0 && col >= 0 && row < board.length && col < board[0].length;
+    }
+
+    private boolean isLand(char[][] board, boolean[][] vis, int row, int col) {
+        return board[row][col] == LAND;
+    }
+
+    private boolean visited(boolean[][] vis, int row, int col) {
+        return !vis[row][col];
     }
 
     public static void main(String[] args) {
