@@ -45,9 +45,9 @@ public class Solution {
             if (board[nextRow][nextCol] == word.charAt(letterCount) && !visited[nextRow][nextCol]) {
                 bucket.add(Character.toString(board[nextRow][nextCol]));
                 visited[nextRow][nextCol] = true;
-                String string = backTracking(board, visited, letterCount + 1, nextRow, nextCol, word, bucket);
-                if (string.length() == word.length()) {
-                    return string;
+                String path = backTracking(board, visited, letterCount + 1, nextRow, nextCol, word, bucket);
+                if (path.length() == word.length()) {
+                    return path;
                 }
                 bucket.removeLast();
                 visited[nextRow][nextCol] = false;
@@ -65,10 +65,6 @@ public class Solution {
                 {'S', 'F', 'E', 'S'},
                 {'A', 'D', 'E', 'E'}
         };
-//        char[][] board = {
-//                {'a', 'a'}
-//        };
-
 
         boolean exist = solution.exist(board, input);
         System.out.println(exist);
