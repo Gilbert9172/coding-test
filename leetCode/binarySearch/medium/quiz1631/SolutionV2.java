@@ -1,4 +1,4 @@
-package dfs.medium.quiz1631;
+package binarySearch.medium.quiz1631;
 
 import java.util.Arrays;
 

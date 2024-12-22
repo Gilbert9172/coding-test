@@ -1,4 +1,4 @@
-package dfs.medium.quiz1631;
+package binarySearch.medium.quiz1631;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -32,9 +32,11 @@ public class SolutionV1 {
                 int nextRow = row + dir[0];
                 int nextCol = col + dir[1];
 
-                if (nextRow < 0 && nextRow >= maxRow && nextCol < 0 && nextCol >= maxCol) continue;
+                if (nextRow < 0 || nextRow >= maxRow || nextCol < 0 || nextCol >= maxCol) continue;
 
+                // 지금까지 경로에서 기록된 ‘최대 고도 차이’와 이번 이동에서 발생한 고도 차이 중 더 큰 값을 선택
                 int newEffort = Math.max(effort, Math.abs(heights[nextRow][nextCol] - heights[row][col]));
+
                 if (efforts[nextRow][nextCol] > newEffort) {
                     efforts[nextRow][nextCol] = newEffort;
                     pq.offer(new int[]{efforts[nextRow][nextCol], nextRow, nextCol});
