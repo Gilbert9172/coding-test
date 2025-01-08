@@ -1,4 +1,4 @@
-package array.medium;
+package array.medium.quiz167;
 
 public class SolutionV1 {
 
