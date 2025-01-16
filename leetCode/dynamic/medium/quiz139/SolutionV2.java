@@ -1,4 +1,4 @@
-package string.medium.quiz139;
+package dynamic.medium.quiz139;
 
 import java.util.List;
 
@@ -13,7 +13,13 @@ public class SolutionV2 {
         }
 
         for (int i = 1; i <= n; i++) {
-            int max = Math.max(i - max_len - 1, 0); // 왜 -1을 하는가
+            /**
+             * 불필요한 계산을 줄이기 위해 검사 범위를 제한
+             * i - max_len - 1: 현재 인덱스 i에서 최대 길이 max_len만큼 거슬러 올라간 위치를 계산.
+             * Math.max(..., 0): 인덱스가 음수가 되지 않도록 범위를 제한.
+             */
+            int max = Math.max(i - max_len - 1, 0);
+
             for (int j = i - 1; j >= max; j--) {
                 String substring = s.substring(j, i);
                 if (dp[j] && wordDict.contains(substring)) {

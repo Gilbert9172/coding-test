@@ -1,4 +1,4 @@
-package string.medium.quiz139;
+package dynamic.medium.quiz139;
 
 import java.util.HashSet;
 import java.util.List;
