@@ -17,9 +17,8 @@ public class quiz42747 {
             int less = 0;
             for (int i = 0; i < citations.length; i++) {
                 if (h <= citations[i]) {
-                    more ++;
-                }
-                else if (citations[i] <= h) {
+                    more++;
+                } else if (citations[i] <= h) {
                     less++;
                 }
             }
@@ -31,7 +30,7 @@ public class quiz42747 {
         Collections.sort(lst, new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
-                return o2-o1;
+                return o2 - o1;
             }
         });
 

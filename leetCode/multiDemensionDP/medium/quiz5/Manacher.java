@@ -1,7 +1,7 @@
-package string.medium.quiz5;
+package multiDemensionDP.medium.quiz5;
 
 // Manacher 알고리즘
-public class SolutionV2 {
+public class Manacher {
     public String longestPalindrome(String s) {
         // 1. 문자열 변환
         StringBuilder builder = new StringBuilder();
@@ -50,7 +50,7 @@ public class SolutionV2 {
 
     public static void main(String[] args) {
         String input = "xxx";
-        SolutionV2 solutionV2 = new SolutionV2();
+        Manacher solutionV2 = new Manacher();
         String answer = solutionV2.longestPalindrome(input);
         System.out.println(answer);
     }

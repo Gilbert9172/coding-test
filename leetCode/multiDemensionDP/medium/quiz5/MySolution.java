@@ -1,21 +1,16 @@
-package string.medium.quiz5;
+package multiDemensionDP.medium.quiz5;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Solution {
+// Brute Force
+public class MySolution {
+
+    private int maxLength;
 
     public String longestPalindrome(String s) {
-        if (s.length() == 1) {
-            return s;
-        }
+        if (s.length() <= 2 && isPalindrome(s)) return s;
 
-        if (s.length() == 2) {
-            if (isPalindrome(s)) {
-                return s;
-            }
-        }
-        int maxLength = 0;
         List<String> participants = new ArrayList<>();
         int left = 0, right = left + 1;
         while (left < s.length() - 2) {
@@ -43,9 +38,7 @@ public class Solution {
     public boolean isPalindrome(String input) {
         int left = 0, right = input.length() - 1;
         while (left <= right) {
-            char leftChar = input.charAt(left);
-            char rightChar = input.charAt(right);
-            if (leftChar != rightChar) {
+            if (input.charAt(left) != input.charAt(right)) {
                 return false;
             }
             left++;
@@ -55,8 +48,8 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        String answer = solution.longestPalindrome("xxx");
+        MySolution solution = new MySolution();
+        String answer = solution.longestPalindrome("abbazezalpha");
         System.out.println(answer);
     }
 }
