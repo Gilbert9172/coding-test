@@ -1,4 +1,4 @@
-package greedy.taskScheduler;
+package greedy.medium.quiz621;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,8 +25,8 @@ public class V1 {
             while (!pq.isEmpty()) {
                 int frequency = pq.poll();
                 if (intervals < n + 1) {
-                    intervals ++;
-                    result ++;
+                    intervals++;
+                    result++;
                     if (frequency > 1) {
                         pendingTasks.add(frequency - 1);
                     }

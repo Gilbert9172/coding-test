@@ -1,4 +1,4 @@
-package twoPointer.quiz11;
+package greedy.medium.quiz11;
 
 public class Solution {
 

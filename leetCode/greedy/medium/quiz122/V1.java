@@ -1,4 +1,4 @@
-package greedy.bestTimeToBuyAndSellStockII;
+package greedy.medium.quiz122;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;

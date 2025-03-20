@@ -1,4 +1,4 @@
-package greedy.taskScheduler;
+package greedy.medium.quiz621;
 
 public class RunSolve {
     public static void main(String[] args) {

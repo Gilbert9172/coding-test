@@ -1,8 +1,11 @@
-package greedy.gasStation;
+package greedy.medium.quiz134;
 
 import java.util.PriorityQueue;
 import java.util.Queue;
 
+/**
+ * [134. Gas Station](https://leetcode.com/problems/gas-station/description/)
+ */
 public class V1 {
     public int canCompleteCircuit(int[] gas, int[] cost) {
         if (gas.length == 1) {
@@ -38,7 +41,7 @@ public class V1 {
                     break;
                 }
             }
-            if (remainGas >= 0)  {
+            if (remainGas >= 0) {
                 answer = initial;
                 break;
             }

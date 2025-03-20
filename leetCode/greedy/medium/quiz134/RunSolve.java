@@ -1,10 +1,10 @@
-package greedy.gasStation;
+package greedy.medium.quiz134;
 
 public class RunSolve {
     public static void main(String[] args) {
         V2 v1 = new V2();
-        int[] gas = {1,2,3,4,5,5,70};
-        int[] cost = {2,3,4,3,9,6,2};
+        int[] gas = {1, 2, 3, 4, 5, 5, 70};
+        int[] cost = {2, 3, 4, 3, 9, 6, 2};
         int answer = v1.canCompleteCircuit(gas, cost);
         System.out.println(answer);
 

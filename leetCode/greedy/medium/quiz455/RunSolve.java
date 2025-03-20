@@ -1,4 +1,4 @@
-package greedy.assignCookie;
+package greedy.medium.quiz455;
 
 public class RunSolve {
     public static void main(String[] args) {

@@ -1,7 +1,10 @@
-package greedy.assignCookie;
+package greedy.medium.quiz455;
 
 import java.util.Arrays;
 
+/**
+ * [455. Assign Cookie](https://leetcode.com/problems/assign-cookies/description/)
+ */
 public class V1 {
     public int findContentChildren(int[] g, int[] s) {
         Arrays.sort(g);

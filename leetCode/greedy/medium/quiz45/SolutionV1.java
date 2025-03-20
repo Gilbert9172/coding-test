@@ -1,4 +1,4 @@
-package array.medium.quiz45;
+package greedy.medium.quiz45;
 
 // TIME LIMIT EXCEED
 public class SolutionV1 {

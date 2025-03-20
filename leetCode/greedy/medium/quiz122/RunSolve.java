@@ -1,4 +1,4 @@
-package greedy.bestTimeToBuyAndSellStockII;
+package greedy.medium.quiz122;
 
 public class RunSolve {
     public static void main(String[] args) {

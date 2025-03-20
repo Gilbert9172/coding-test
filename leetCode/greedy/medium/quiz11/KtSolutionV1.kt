@@ -1,4 +1,4 @@
-package twoPointer.quiz11
+package greedy.medium.quiz11
 
 fun main() {
     val nums = intArrayOf(1, 8, 6, 2, 5, 4, 8, 3, 7)

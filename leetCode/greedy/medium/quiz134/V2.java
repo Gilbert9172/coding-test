@@ -1,4 +1,4 @@
-package greedy.gasStation;
+package greedy.medium.quiz134;
 
 import java.util.Arrays;
 

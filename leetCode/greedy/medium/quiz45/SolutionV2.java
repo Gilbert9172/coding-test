@@ -1,4 +1,4 @@
-package array.medium.quiz45;
+package greedy.medium.quiz45;
 
 public class SolutionV2 {
 

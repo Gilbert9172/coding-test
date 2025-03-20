@@ -1,8 +1,4 @@
-package greedy.bestTimeToBuyAndSellStockII;
-
-import java.util.ArrayDeque;
-import java.util.Arrays;
-import java.util.Deque;
+package greedy.medium.quiz122;
 
 public class V2 {
     public int maxProfit(int[] prices) {
