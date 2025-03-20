@@ -1,5 +1,12 @@
 package dynamic.medium.quiz322
 
+fun main() {
+    val solution = KtSolutionV2()
+    val nums = intArrayOf(2, 5, 10, 1)
+    val answer = solution.coinChange(nums, 27)
+    println(answer)
+}
+
 class KtSolutionV2 {
 
     private val initVal = -2
