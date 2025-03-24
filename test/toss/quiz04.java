@@ -1,10 +1,12 @@
+package toss;
+
 import java.util.*;
 
 /**
  * 직접 초대한 사람수 * 10
  * 내가 초대한 사람이 초다핸 사람 수 * 3
  * 내가 초대한 사람이 초대한 사람 수 * 1
- *
+ * <p>
  * [초대자, 피초재자]
  * [[1, 2],
  * [1, 3],
@@ -17,8 +19,9 @@ public class quiz04 {
 
 
     static Map<Long, Long> answerMap = new HashMap<>();
+
     public static void main(String[] args) {
-        Long[][] invitationPairs = {{1L, 2L},{1L, 3L},{3L, 4L},{4L, 5L},{4L, 6L},{4L, 7L}};
+        Long[][] invitationPairs = {{1L, 2L}, {1L, 3L}, {3L, 4L}, {4L, 5L}, {4L, 6L}, {4L, 7L}};
 
         Map<Long, Long> inviters = new HashMap<>();
 
@@ -42,7 +45,7 @@ public class quiz04 {
             // 내가 초대한 사람이 초대한 사람 수
             Long directInvite2 = 0L;
             for (Long aLong : lst) {
-                directInvite2 += inviters.getOrDefault(aLong,0L);
+                directInvite2 += inviters.getOrDefault(aLong, 0L);
             }
 
             // 내가 초대한 사람이 초대한 사람이 초대한 사람의 수
@@ -58,10 +61,10 @@ public class quiz04 {
             // 그사람이 초대한 수를 찾는다.
             Long directInvite3 = 0L;
             for (Long aLong : lst2) {
-                directInvite3 += inviters.getOrDefault(aLong,0L);
+                directInvite3 += inviters.getOrDefault(aLong, 0L);
             }
 
-            answerMap.put((directInvite*10) + (directInvite2*3) + directInvite3, inviter);
+            answerMap.put((directInvite * 10) + (directInvite2 * 3) + directInvite3, inviter);
         }
 
         List<Long> ansList = new ArrayList<>();

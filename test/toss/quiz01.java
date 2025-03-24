@@ -1,5 +1,8 @@
-import java.util.*;
-import java.util.stream.Stream;
+package toss;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class quiz01 {
 
@@ -9,8 +12,8 @@ public class quiz01 {
 
         List<Integer> subList = new ArrayList<>();
         for (int i = 0; i < s.length() - 2; i++) {
-            String sub = s.substring(i, i+3);
-            if (sub.charAt(0) == sub.charAt(1) && sub.charAt(0) == sub.charAt(2) && sub.charAt(1) == sub.charAt(2) ) {
+            String sub = s.substring(i, i + 3);
+            if (sub.charAt(0) == sub.charAt(1) && sub.charAt(0) == sub.charAt(2) && sub.charAt(1) == sub.charAt(2)) {
                 subList.add(Integer.parseInt(sub));
             }
         }

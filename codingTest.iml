@@ -10,6 +10,7 @@
       <sourceFolder url="file://$MODULE_DIR$/study" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/codingInterviewBook" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/leetCode" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="graalvm-jdk-21" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
