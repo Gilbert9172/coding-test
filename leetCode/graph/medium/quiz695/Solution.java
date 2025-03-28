@@ -1,4 +1,4 @@
-package dfs.medium.quiz695;
+package graph.medium.quiz695;
 
 public class Solution {
 

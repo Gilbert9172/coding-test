@@ -1,8 +1,6 @@
-package dfs.medium.quiz695;
+package graph.medium.quiz695;
 
-public class SolutionV2 {
-
-    private static final int[][] dirs = {{-1, 0}, {1, 0}, {0, 1}, {0, -1}};
+public class SolutionV3 {
 
     public int maxAreaOfIsland(int[][] grid) {
         int maxRow = grid.length;
@@ -31,11 +29,10 @@ public class SolutionV2 {
         grid[currRow][currCol] = 0;
 
         int areaSize = 1;
-        for (int[] dir : dirs) {
-            int nextRow = currRow + dir[0];
-            int nextCol = currCol + dir[1];
-            areaSize += dfs(grid, nextRow, nextCol);
-        }
+        areaSize += dfs(grid, currRow, currCol + 1);
+        areaSize += dfs(grid, currRow, currCol - 1);
+        areaSize += dfs(grid, currRow + 1, currCol);
+        areaSize += dfs(grid, currRow - 1, currCol);
         return areaSize;
     }
 
@@ -47,7 +44,7 @@ public class SolutionV2 {
                 {0, 0, 0, 0, 1},
                 {1, 1, 0, 1, 1}
         };
-        SolutionV2 solution = new SolutionV2();
+        SolutionV3 solution = new SolutionV3();
         int answer = solution.maxAreaOfIsland(grid);
         System.out.println(answer);
     }
