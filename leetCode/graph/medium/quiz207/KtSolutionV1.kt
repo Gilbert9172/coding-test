@@ -18,14 +18,12 @@ fun main() {
 
 class KtSolutionV1 {
 
-    private val taken = mutableListOf<Int>()
-    private val takes = mutableListOf<Int>()
+    private val taken = mutableSetOf<Int>()
+    private val takes = mutableSetOf<Int>()
 
     fun canFinish(numCourses: Int, prerequisites: Array<IntArray>): Boolean {
 
         // 인접 리스트를 생성한다.
-        // key : pre course
-        // value : main course
         val courseRelationMap = mutableMapOf<Int, MutableList<Int>>()
         for (prerequisite in prerequisites) {
             courseRelationMap.putIfAbsent(prerequisite[0], mutableListOf())
