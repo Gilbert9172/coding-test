@@ -1,4 +1,4 @@
-package gold.five
+package gold.five.quiz2011
 
 /**
  * [암호코드](https://www.acmicpc.net/problem/2011)
