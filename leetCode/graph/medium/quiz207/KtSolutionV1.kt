@@ -25,9 +25,8 @@ class KtSolutionV1 {
 
         // 인접 리스트를 생성한다.
         val courseRelationMap = mutableMapOf<Int, MutableList<Int>>()
-        for (prerequisite in prerequisites) {
-            courseRelationMap.putIfAbsent(prerequisite[0], mutableListOf())
-            courseRelationMap[prerequisite[0]]!!.add(prerequisite[1])
+        prerequisites.forEach {
+            courseRelationMap.computeIfAbsent(it[0]) { mutableListOf() }.add(it[1])
         }
 
         for (course in courseRelationMap.keys) {
