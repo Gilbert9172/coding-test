@@ -1,20 +1,19 @@
 package graph.medium.quiz261
 
-//Input: n = 5, edges = [[0,1],[0,2],[0,3],[1,4]]
-//Input: n = 5, edges = [[0,1],[1,2],[2,3],[1,3],[1,4]]
+/**
+ * [261. Graph Valid Tree](https://leetcode.ca/2016-08-17-261-Graph-Valid-Tree/)
+ */
 fun main() {
     val n = 5
     val edges = arrayOf(
         intArrayOf(0, 1),
         intArrayOf(0, 2),
         intArrayOf(0, 3),
-//        intArrayOf(1, 3),
         intArrayOf(1, 4)
     )
     KtSolutionV1().validTree(n, edges).apply {
         println(this)
     }
-
 }
 
 class KtSolutionV1 {
