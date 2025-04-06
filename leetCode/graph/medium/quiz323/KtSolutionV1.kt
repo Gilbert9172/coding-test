@@ -1,8 +1,9 @@
 package graph.medium.quiz323
 
+/**
+ * [323. Number of Connected Components in an Undirected Graph](https://leetcode.ca/2016-10-18-323-Number-of-Connected-Components-in-an-Undirected-Graph/)
+ */
 fun main() {
-    //Input: n = 5, edges = [[0,1],[1,2],[3,4]]
-    // Input: n = 5, edges = [[0,1],[1,2],[2,3],[3,4]]
     val n = 5
     val edges = arrayOf(
         intArrayOf(0, 1),
