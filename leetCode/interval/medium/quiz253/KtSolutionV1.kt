@@ -21,14 +21,14 @@ class KtSolutionV1 {
     fun minMeetingRooms(intervals: List<Interval>): Int {
         intervals.sortedBy { a -> a.start }
 
-        val minHeap = PriorityQueue<Int>()
+        val pq = PriorityQueue<Int>()
         for (interval in intervals) {
-            if (minHeap.isNotEmpty() && minHeap.peek() <= interval.start) {
-                minHeap.poll()
+            if (pq.isNotEmpty() && pq.peek() <= interval.start) {
+                pq.poll()
             }
-            minHeap.add(interval.end)
+            pq.add(interval.end)
         }
 
-        return minHeap.size
+        return pq.size
     }
 }
