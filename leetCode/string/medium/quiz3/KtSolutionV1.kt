@@ -1,5 +1,11 @@
 package string.medium.quiz3
 
+fun main() {
+    val answer = KtSolutionV1().lengthOfLongestSubstring("pwwkew")
+    println(answer)
+}
+
+
 class KtSolutionV1 {
     fun lengthOfLongestSubstring(s: String): Int {
         val visited = mutableMapOf<Char, Int>()
