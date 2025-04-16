@@ -1,4 +1,4 @@
-package string.medium.quiz49
+package string.medium.quiz49.kotlin
 
 /**
  * [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/)
